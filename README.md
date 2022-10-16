@@ -1,6 +1,8 @@
 # Panic-Bot
 Setting up node monitoring using Panic Bot
 
+On the server on which we will install and configure the bot, we perform the following steps
+
 # Updating packages:
 
 ```
