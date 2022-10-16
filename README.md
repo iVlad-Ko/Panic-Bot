@@ -58,7 +58,7 @@ pipenv run python run_setup.py
 Set up telegram alerts by pressing Y
 Next, we need to enter the API token:
 
-* We go to telegram
+* Go to telegram
 * In the search, enter @BotFather, go to the bot and click Start
 * Use the /newbot command to create a bot, enter the bot name and username. The username must end with bot (eg x3m_bot). After that, BotFather will send a message with a link to our bot and an API token. Copy the API token and save it in notepad
 * Follow the link to the chat of your bot and click Start
@@ -93,9 +93,9 @@ Now that we have the bot, API token, and chat ID, let's go back to the terminal 
   Confirm Y and Enter three times
   Testing Redis сonfirm Y
   
-# Connecting a node to monitoring
+# Preparing a node for monitoring
   
-  We go to the server with the node that we want to connect to the bot and make changes to the config file. Use your path to the config file (usually $HOME/.project_name/config/config.toml)
+  Go to the server with the node that we want to connect to the bot and make changes to the config file. Use your path to the config file (usually $HOME/.project_name/config/config.toml)
   
   ```
   nano ~/.haqqd/config/config.toml
