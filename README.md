@@ -120,7 +120,11 @@ Now that we have the bot, API token, and chat ID, let's go back to the terminal 
   
   Back to the server with Panic!
   Enter the name of the node and the RPC url in the format http://NODE_IP:26657, confirm that the node is a validator.
-  Skip setting up Github updates. We'll do that a little later.
+  To configure notifications about changes to github repositories, edit the file user_config_repos.in:
+  
+  ```
+  nano /opt/panic/panic_cosmos/config/user_config_repos.in
+  ```
   
   # The launch of Panic!
   
@@ -147,3 +151,15 @@ WantedBy=multi-user.target
   
   ```
   
+Start the service and check the logs
+  
+  ```
+sudo systemctl daemon-reload
+sudo systemctl enable panic
+sudo systemctl start panic
+sudo journalctl -u panic -f
+  ```
+  
+  To add other nodes, edit the user_config_nodes.ini file, having previously made changes to the config.toml file of the node we want to add
+  In the user_config_nodes.ini file, copy all the existing lines and paste below. Change the number, name and url. Save the changes. Then restart Panic! 
+  Check that the second node appears in the logs
